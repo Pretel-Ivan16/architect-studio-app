@@ -1,5 +1,6 @@
 "use client"
 
+import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import React, { use, useState } from 'react'
 
@@ -17,8 +18,24 @@ function Header() {
             <Link href="#philosophy" className='text-sm tracking-widest uppercase text-[#000000] hover:text-[#6b0101] transition-colors'>Philosophy</Link>
             <Link href="#contact" className='text-sm tracking-widest uppercase text-[#000000] hover:text-[#6b0101] transition-colors'>Contact</Link>
           </div>
+          <button
+            className='md:hidden p-2 hover:cursor-pointer'
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label='Toggle Menu'
+          >
+            {isMenuOpen ? <X className='w-6 h-6'/> : <Menu className='w-6 h-6'/>}
+          </button>
         </div>
-
+        {isMenuOpen && (
+          <div className='md:hidden py-8 border-t border-[#000000] '>
+            <div className='flex flex-col gap-6'>
+              <Link href='#projects' className='text-sm tracking-widest uppercase text-[#000000] hover:text-[#6b0101] transition-colors' onClick={() => setIsMenuOpen(false)}>Projects</Link>
+              <Link href='#about' className='text-sm tracking-widest uppercase text-[#000000] hover:text-[#6b0101] transition-colors' onClick={() => setIsMenuOpen(false)}>About Me</Link>
+              <Link href='#philosophy' className='text-sm tracking-widest uppercase text-[#000000] hover:text-[#6b0101] transition-colors' onClick={() => setIsMenuOpen(false)}>Philosophy</Link>
+              <Link href='#contact' className='text-sm tracking-widest uppercase text-[#000000] hover:text-[#6b0101] transition-colors' onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   )
