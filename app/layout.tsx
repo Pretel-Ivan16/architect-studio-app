@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Cormorant_Garamond } from 'next/font/google';
 import Header from "@/components/header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const cormorantGaramond = Cormorant_Garamond({ subsets: ["latin"], variable: '--font-serif' });
 
 export const metadata: Metadata = {
   title: 'Architect Studio',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${cormorantGaramond.variable}`}>
         <Header/>
         {children}
       </body>
