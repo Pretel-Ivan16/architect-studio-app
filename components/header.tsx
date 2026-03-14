@@ -15,7 +15,7 @@ function Header() {
   ]
 
   return (
-    <header className='fixed top-0 left-0 right-0 z-50 bg-[#faf0ef] backdrop-blur-sm'>
+    <header className='fixed top-0 left-0 right-0 z-50 bg-[#faf0ef]/50 backdrop-blur-md'>
       <nav className='max-w-7xl mx-auto px-6 lg:px-12'>
         <div className='flex items-center justify-between h-20'>
           <Link href="/" className='font-serif text-2xl tracking-wider text-foreground'>ARQ<span className='text-[#610000]'>.</span></Link>
