@@ -42,13 +42,28 @@ function Header() {
             )}
           </button>
         </div>
-        {isMenuOpen && (
-          <div className='md:hidden py-8 border-t border-[#0b0b0b] '>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-80' : 'max-h-0'
+          }`}
+        >
+          <div className='py-8 border-t border-[#0b0b0b]'>
             <div className='flex flex-col gap-6'>
-              <Link href='#projects' className='text-sm tracking-widest uppercase text-[#0b0b0b] hover:text-[#6b1426] transition-colors' onClick={() => setIsMenuOpen(false)}>Projects</Link>
-              <Link href='#about' className='text-sm tracking-widest uppercase text-[#0b0b0b] hover:text-[#6b1426] transition-colors' onClick={() => setIsMenuOpen(false)}>About Me</Link>
-              <Link href='#philosophy' className='text-sm tracking-widest uppercase text-[#0b0b0b] hover:text-[#6b1426] transition-colors' onClick={() => setIsMenuOpen(false)}>Philosophy</Link>
-              <Link href='#contact' className='text-sm tracking-widest uppercase text-[#0b0b0b] hover:text-[#6b1426] transition-colors' onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              {menuItems.map((item, index) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm tracking-widest uppercase text-[#0b0b0b] hover:text-[#6b1426] transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                  }`}
+                  style={{
+                    transitionDelay: isMenuOpen ? `${index * 50}ms` : '0ms',
+                  }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
