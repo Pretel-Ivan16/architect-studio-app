@@ -7,22 +7,22 @@ export interface Stats {
 export const stats: Stats[] = [
   {
     id: 1,
-    number: "25+",
+    number: "0",
     label: "Years of experience"
   },
   {
     id: 2,
-    number: "120",
+    number: "1",
     label: "Completed Projects"
   },
   {
     id: 3,
-    number: "15",
+    number: "2",
     label: "Design Awards"
   },
   {
     id: 4,
-    number: "8",
+    number: "3",
     label: "Countrys"
   }
 ]
