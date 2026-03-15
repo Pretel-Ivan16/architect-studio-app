@@ -1,7 +1,18 @@
+"use client"
+
 import { stats } from '@/data/stats'
 import React from 'react'
 
 function About() {
+  const handleScrollToPhilosophy = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const element = document.getElementById('philosophy')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      window.history.pushState(null, '', '#philosophy')
+    }
+  }
+
   return (
     <section id='about' className='py-24 lg:py-32 bg-[#111d37]'>
       <div className='max-w-7xl mx-auto px-6 lg:px-12'>
@@ -14,7 +25,7 @@ function About() {
                 Founded in 2026. STELLARQ was born out of passion for the profession, a belief that architecture should be functional for both people and their surroundings, and a deep affection for another person.
               </p>
             </div>
-            <a href="#philosophy" className='inline-flex items-center gap-2 mt-10 text-[#faf0ef] text-sm tracking-widest uppercase border border-[#faf0ef]/30 px-8 py-4 hover:bg-[#faf0ef] hover:text-[#111d37] transition-all duration-300'>
+            <a href="#philosophy" onClick={handleScrollToPhilosophy} className='inline-flex items-center gap-2 mt-10 text-[#faf0ef] text-sm tracking-widest uppercase border border-[#faf0ef]/30 px-8 py-4 hover:bg-[#faf0ef] hover:text-[#111d37] transition-all duration-300'>
               Learn about our philosophy
             </a>
           </div>

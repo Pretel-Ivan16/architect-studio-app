@@ -1,6 +1,17 @@
+"use client"
+
 import { ArrowDown } from 'lucide-react'
 
 function Hero() {
+  const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const element = document.getElementById('projects')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      window.history.pushState(null, '', '#projects')
+    }
+  }
+
   return (
     <section className='relative min-h-screen bg-[#6b1426] flex items-center justify-between overflow-hidden'>
       <div className='absolute inset-0 opacity-30'>
@@ -16,7 +27,7 @@ function Hero() {
           We design spaces <br /><span className='italic'>that inspire</span>
         </h1>
         <p className='mt-8 text-[#ffe4e4] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-pretty'>We create architecture that transcendes time, merging functionality with aesthetics that reflect the essence of each project.</p>
-        <a href="#projects" className='inline-flex items-center gap-2 mt-12 text-[#ffe4e4] text-sm tracking-widest uppercase border border-[#ffe4e4] px-8 py-4 hover:bg-[#f9eaea] hover:text-[#6b1426] transition-all duration-300'>Explore Projects</a>
+        <a href="#projects" onClick={handleScrollToProjects} className='inline-flex items-center gap-2 mt-12 text-[#ffe4e4] text-sm tracking-widest uppercase border border-[#ffe4e4] px-8 py-4 hover:bg-[#f9eaea] hover:text-[#6b1426] transition-all duration-300'>Explore Projects</a>
       </div>
       <div className='absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce'>
         <ArrowDown className='w-5 h-5 text-[#ffe4e4]'/>
