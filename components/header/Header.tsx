@@ -13,7 +13,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
-  const handleNavClick = useSmoothScroll(isHome)
+  const handleNavClick = useSmoothScroll(isHome, pathname)
 
   return (
     <header className='fixed top-0 left-0 right-0 z-50 bg-[#faf0ef]/50 backdrop-blur-md'>
