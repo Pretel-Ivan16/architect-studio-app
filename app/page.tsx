@@ -9,13 +9,11 @@ import Projects from "@/components/projects/Projects";
 export default function Home() {
   return (
     <main>
-      <Header/>
       <Hero/>
       <Projects/>
       <About/>
       <Philosophy/>
       <Contact/>
-      <Footer/>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
 import Header from "@/components/header/Header";
 import "./globals.css";
+import Footer from '@/components/footer/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
 const cormorantGaramond = Cormorant_Garamond({ subsets: ["latin"], variable: '--font-serif' });
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${cormorantGaramond.variable}`}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
