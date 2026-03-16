@@ -1,3 +1,12 @@
+export const projectsContent = {
+  subtitle: 'Portfolio',
+  title: 'Projects',
+  titleHighlight: 'selected',
+  description: 'Each project is a unique exploration of form, function, and context. Discover our selection of recent works.',
+  buttonLabel: 'View all projects',
+  buttonHref: '/projects',
+}
+
 export interface Project {
   id: number
   title: string
