@@ -1,9 +1,14 @@
 import { useCallback } from 'react'
 import { smoothScroll } from '@/lib/scroll'
 
-export function useSmoothScroll() {
+export function useSmoothScroll(isHome: boolean = true) {
   return useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
-    smoothScroll(href)
-  }, [])
+    
+    if (isHome) {
+      smoothScroll(href)
+    } else {
+      window.location.href = `/${href}`
+    }
+  }, [isHome])
 }
