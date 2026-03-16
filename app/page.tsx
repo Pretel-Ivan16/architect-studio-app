@@ -2,7 +2,7 @@ import About from "@/components/about";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header/Header";
-import Hero from "@/components/hero";
+import Hero from "@/components/hero/Hero";
 import Philosophy from "@/components/philosophy";
 import Projects from "@/components/projects";
 
