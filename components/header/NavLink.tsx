@@ -10,8 +10,8 @@ interface NavLinkProps {
 export function NavLink({ href, label, onClick, isHome }: NavLinkProps) {
   return (
     <Link
-      href={isHome ? href : `/${href}`}
-      onClick={isHome ? (e) => onClick(e, href) : undefined}
+      href="#"
+      onClick={(e) => onClick(e, href)}
       className='text-sm tracking-widest uppercase text-[#0b0b0b] hover:text-[#6b1426] transition-colors'
     >
       {label}
