@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { projects } from "@/data/projects"
+import { ProjectNavigation } from "@/components/ui/ProjectNavigation"
+import { ProjectIndex } from "@/components/ui/ProjectIndex"
 
 function ProjectsPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -52,25 +54,8 @@ function ProjectsPage() {
         ))}
       </div>
       <div className='absolute bottom-8 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-12'>
-        <button 
-          onClick={goPrev}
-          className='w-12 h-12 bg-[#6b1426] border border-[#6b1426] flex items-center justify-center text-white hover:bg-transparent hover:text-[#6b1426] transition-all cursor-pointer text-xl'
-          aria-label="Proyecto anterior"
-        >
-          ←
-        </button>
-        
-        <div className='text-white text-sm tracking-widest uppercase'>
-          {currentIndex + 1} / {projects.length}
-        </div>
-        
-        <button 
-          onClick={goNext}
-          className='w-12 h-12 bg-[#6b1426] border border-[#6b1426] flex items-center justify-center text-white hover:bg-transparent hover:text-[#6b1426] transition-all cursor-pointer text-xl'
-          aria-label="Siguiente proyecto"
-        >
-          →
-        </button>
+        <ProjectNavigation onPrev={goPrev} onNext={goNext} />
+        <ProjectIndex currentIndex={currentIndex} total={projects.length} />
       </div>
     </main>
   )
