@@ -1,3 +1,5 @@
+import { FormLabel } from '@/components/ui/FormLabel'
+
 interface FormTextareaProps {
   id: string
   label: string
@@ -19,9 +21,9 @@ export function FormTextarea({
 }: FormTextareaProps) {
   return (
     <div>
-      <label htmlFor={id} className="block text-[#faf0ef]/60 text-sm tracking-wider uppercase mb-2">
+      <FormLabel htmlFor={id}>
         {label}
-      </label>
+      </FormLabel>
       <textarea
         id={id}
         rows={rows}

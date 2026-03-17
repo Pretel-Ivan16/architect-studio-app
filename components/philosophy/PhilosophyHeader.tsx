@@ -1,5 +1,5 @@
-import { SectionSubtitle } from '@/components/ui/SectionSubtitle'
-import { SectionTitle } from '@/components/ui/SectionTitle'
+import { Subtitle } from '@/components/ui/Subtitle'
+import { Title } from '@/components/ui/Title'
 
 interface PhilosophyHeaderProps {
   subtitle: string
@@ -9,12 +9,12 @@ interface PhilosophyHeaderProps {
 export function PhilosophyHeader({ subtitle, title }: PhilosophyHeaderProps) {
   return (
     <div className='max-w-3xl mb-20'>
-      <SectionSubtitle>
+      <Subtitle>
         {subtitle}
-      </SectionSubtitle>
-      <SectionTitle>
+      </Subtitle>
+      <Title>
         {title}
-      </SectionTitle>
+      </Title>
     </div>
   )
 }

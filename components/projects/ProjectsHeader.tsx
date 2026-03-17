@@ -1,6 +1,6 @@
-import { SectionSubtitle } from '@/components/ui/SectionSubtitle'
-import { SectionTitle } from '@/components/ui/SectionTitle'
-import { SectionDescription } from '@/components/ui/SectionDescription'
+import { Subtitle } from '@/components/ui/Subtitle'
+import { Title } from '@/components/ui/Title'
+import { Description } from '@/components/ui/Description'
 
 interface ProjectsHeaderProps {
   subtitle: string
@@ -18,18 +18,18 @@ export function ProjectsHeader({
   return (
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
       <div>
-        <SectionSubtitle>
+        <Subtitle>
           {subtitle}
-        </SectionSubtitle>
-        <SectionTitle>
+        </Subtitle>
+        <Title>
           {title}
           <br />
           <span className="italic">{titleHighlight}</span>
-        </SectionTitle>
+        </Title>
       </div>
-      <SectionDescription>
+      <Description>
         {description}
-      </SectionDescription>
+      </Description>
     </div>
   )
 }

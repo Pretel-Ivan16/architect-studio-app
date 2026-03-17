@@ -1,4 +1,4 @@
-import { MainTitle } from '@/components/ui/MainTitle'
+import { Title } from '@/components/ui/Title'
 
 interface HeroTitleProps {
   title: string
@@ -7,9 +7,9 @@ interface HeroTitleProps {
 
 export function HeroTitle({ title, highlight }: HeroTitleProps) {
   return (
-    <MainTitle>
+    <Title className='text-[#ffe4e4]' as='h1'>
       {title} <br />
       <span className='italic'>{highlight}</span>
-    </MainTitle>
+    </Title>
   )
 }

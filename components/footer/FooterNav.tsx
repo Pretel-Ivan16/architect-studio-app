@@ -1,4 +1,5 @@
 import { FooterLink } from './FooterLink'
+import { FooterTitle } from '@/components/ui/FooterTitle'
 
 interface FooterNavProps {
   title: string
@@ -9,9 +10,9 @@ interface FooterNavProps {
 export function FooterNav({ title, links, onLinkClick }: FooterNavProps) {
   return (
     <div>
-      <h4 className="text-[#faf0ef] text-sm tracking-widest uppercase mb-4">
+      <FooterTitle>
         {title}
-      </h4>
+      </FooterTitle>
       <nav className="flex flex-col gap-3">
         {links.map((link, index) => (
           <FooterLink 

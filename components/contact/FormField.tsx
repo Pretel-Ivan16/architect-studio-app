@@ -1,3 +1,5 @@
+import { FormLabel } from '@/components/ui/FormLabel'
+
 interface FormFieldProps {
   id: string
   label: string
@@ -17,9 +19,9 @@ export function FormField({
 }: FormFieldProps) {
   return (
     <div>
-      <label htmlFor={id} className="block text-[#faf0ef]/60 text-sm tracking-wider uppercase mb-2">
+      <FormLabel htmlFor={id}>
         {label}
-      </label>
+      </FormLabel>
       <input 
         type="text" 
         id={id}

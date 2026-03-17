@@ -1,5 +1,5 @@
-import { SectionSubtitle } from '@/components/ui/SectionSubtitle'
-import { SectionTitle } from '@/components/ui/SectionTitle'
+import { Subtitle } from '@/components/ui/Subtitle'
+import { Title } from '@/components/ui/Title'
 
 interface AboutHeaderProps {
   subtitle: string
@@ -9,12 +9,12 @@ interface AboutHeaderProps {
 export function AboutHeader({ subtitle, title }: AboutHeaderProps) {
   return (
     <div>
-      <SectionSubtitle className='text-[#faf0ef]'>
+      <Subtitle className='text-[#faf0ef]'>
         {subtitle}
-      </SectionSubtitle>
-      <SectionTitle className='text-[#faf0ef]'>
+      </Subtitle>
+      <Title className='text-[#faf0ef]'>
         {title}
-      </SectionTitle>
+      </Title>
     </div>
   )
 }
