@@ -8,7 +8,7 @@ interface ContactInfoProps {
 
 export function ContactInfo({ direction, email, phone }: ContactInfoProps) {
   return (
-    <div className="mt-12 space-y-6">
+    <address className="mt-12 space-y-6">
       <ContactItem 
         label="Direction"
         content={<p>{direction}</p>}
@@ -29,6 +29,6 @@ export function ContactInfo({ direction, email, phone }: ContactInfoProps) {
           </a>
         }
       />
-    </div>
+    </address>
   )
 }

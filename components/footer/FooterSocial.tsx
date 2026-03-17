@@ -8,11 +8,11 @@ interface FooterSocialProps {
 
 export function FooterSocial({ title, links }: FooterSocialProps) {
   return (
-    <div>
+    <nav>
       <FooterTitle>
         {title}
       </FooterTitle>
-      <nav className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3">
         {links.map((link, index) => (
           <FooterLink 
             key={`${link.label}-${index}`}
@@ -20,7 +20,7 @@ export function FooterSocial({ title, links }: FooterSocialProps) {
             label={link.label}
           />
         ))}
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }

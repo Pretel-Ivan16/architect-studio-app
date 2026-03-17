@@ -18,7 +18,7 @@ export function FormField({
   required = false,
 }: FormFieldProps) {
   return (
-    <div>
+    <fieldset>
       <FormLabel htmlFor={id}>
         {label}
       </FormLabel>
@@ -31,6 +31,6 @@ export function FormField({
         placeholder={placeholder}
         required={required}
       />
-    </div>
+    </fieldset>
   )
 }

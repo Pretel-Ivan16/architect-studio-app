@@ -20,7 +20,7 @@ export function FormTextarea({
   required = false,
 }: FormTextareaProps) {
   return (
-    <div>
+    <fieldset>
       <FormLabel htmlFor={id}>
         {label}
       </FormLabel>
@@ -33,6 +33,6 @@ export function FormTextarea({
         placeholder={placeholder}
         required={required}
       />
-    </div>
+    </fieldset>
   )
 }

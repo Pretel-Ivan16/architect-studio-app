@@ -11,7 +11,7 @@ interface PrincipleCardProps {
 
 export function PrincipleCard({ principle }: PrincipleCardProps) {
   return (
-    <div className="group border-t border-[#d1c4c0] pt-8">
+    <article className="group border-t border-[#d1c4c0] pt-8">
       <span className="text-[#6b1426] text-sm tracking-wider">
         {principle.number}
       </span>
@@ -21,6 +21,6 @@ export function PrincipleCard({ principle }: PrincipleCardProps) {
       <p className="text-[#0b0b0b] mt-4 leading-relaxed text-pretty">
         {principle.description}
       </p>
-    </div>
+    </article>
   )
 }

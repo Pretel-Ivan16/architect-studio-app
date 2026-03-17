@@ -15,7 +15,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ isOpen, menuItems, onNavClick, onClose, isHome }: MobileMenuProps) {
   return (
-    <div
+    <nav
       className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
         isOpen ? 'max-h-80' : 'max-h-0'
       }`}
@@ -36,6 +36,6 @@ export function MobileMenu({ isOpen, menuItems, onNavClick, onClose, isHome }: M
           ))}
         </div>
       </div>
-    </div>
+    </nav>
   )
 }

@@ -9,11 +9,11 @@ interface FooterNavProps {
 
 export function FooterNav({ title, links, onLinkClick }: FooterNavProps) {
   return (
-    <div>
+    <nav>
       <FooterTitle>
         {title}
       </FooterTitle>
-      <nav className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3">
         {links.map((link, index) => (
           <FooterLink 
             key={`${link.label}-${index}`}
@@ -22,7 +22,7 @@ export function FooterNav({ title, links, onLinkClick }: FooterNavProps) {
             onClick={onLinkClick}
           />
         ))}
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }

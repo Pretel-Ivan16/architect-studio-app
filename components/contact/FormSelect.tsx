@@ -18,7 +18,7 @@ export function FormSelect({
   required = false,
 }: FormSelectProps) {
   return (
-    <div>
+    <fieldset>
       <FormLabel htmlFor={id}>
         {label}
       </FormLabel>
@@ -36,6 +36,6 @@ export function FormSelect({
           </option>
         ))}
       </select>
-    </div>
+    </fieldset>
   )
 }
