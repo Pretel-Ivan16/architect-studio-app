@@ -9,6 +9,7 @@ interface Project {
   category: string
   year: string
   description: string
+  images: string[]
 }
 
 interface ProjectCardProps {
@@ -31,7 +32,7 @@ export function ProjectCard({
       onMouseLeave={onMouseLeave}
     >
       <div className="relative">
-        <ProjectImage isHovered={isHovered} />
+        <ProjectImage isHovered={isHovered} image={project.images[0]} />
         <ProjectMeta category={project.category} year={project.year} />
       </div>
       <ProjectInfo title={project.title} location={project.location} isHovered={isHovered} />

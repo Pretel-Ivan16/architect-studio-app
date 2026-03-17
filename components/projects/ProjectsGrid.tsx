@@ -7,6 +7,7 @@ interface Project {
   category: string
   year: string
   description: string
+  images: string[]
 }
 
 interface ProjectsGridProps {
