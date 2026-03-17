@@ -1,3 +1,7 @@
+import { SectionSubtitle } from '@/components/ui/SectionSubtitle'
+import { SectionTitle } from '@/components/ui/SectionTitle'
+import { SectionDescription } from '@/components/ui/SectionDescription'
+
 interface ProjectsHeaderProps {
   subtitle: string
   title: string
@@ -14,18 +18,18 @@ export function ProjectsHeader({
   return (
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
       <div>
-        <p className="text-[#6b1426] text-sm tracking-[0.3em] uppercase mb-4">
+        <SectionSubtitle>
           {subtitle}
-        </p>
-        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#0b0b0b]">
+        </SectionSubtitle>
+        <SectionTitle>
           {title}
           <br />
           <span className="italic">{titleHighlight}</span>
-        </h2>
+        </SectionTitle>
       </div>
-      <p className="text-[#666666] max-w-md text-pretty">
+      <SectionDescription>
         {description}
-      </p>
+      </SectionDescription>
     </div>
   )
 }
