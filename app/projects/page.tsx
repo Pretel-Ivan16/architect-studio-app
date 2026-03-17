@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import { projects } from "@/data/projects"
-import { ButtonNavigationLeft } from "@/components/ui/ButtonNavigationLeft"
-import { ButtonNavigationRight } from "@/components/ui/ButtonNavigationRight"
-import { ProjectIndex } from "@/components/ui/ProjectIndex"
-import { ProjectImage } from "@/components/ui/ProjectImageComponent"
-import { ProjectInfoDisplay } from "@/components/ui/ProjectInfoDisplay"
+import { ButtonLeft } from "@/components/ui/ButtonLeft"
+import { ButtonRight } from "@/components/ui/ButtonRight"
+import { Index } from "@/components/ui/Index"
+import { ProjectImage } from "@/components/ui/ProjectImage"
+import { ProjectInfo } from "@/components/ui/ProjectInfo"
 
 function ProjectsPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -40,7 +40,7 @@ function ProjectsPage() {
                   alt={project.title}
                 />
               )}
-              <ProjectInfoDisplay
+              <ProjectInfo
                 category={project.category}
                 year={project.year}
                 title={project.title}
@@ -51,9 +51,9 @@ function ProjectsPage() {
         ))}
       </div>
       <div className='absolute bottom-8 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-12'>
-        <ButtonNavigationLeft onClick={goPrev} />
-        <ProjectIndex currentIndex={currentIndex} total={projects.length} />
-        <ButtonNavigationRight onClick={goNext} />
+        <ButtonLeft onClick={goPrev} />
+        <Index currentIndex={currentIndex} total={projects.length} />
+        <ButtonRight onClick={goNext} />
       </div>
     </main>
   )
