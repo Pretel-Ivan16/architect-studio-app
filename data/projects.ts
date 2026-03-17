@@ -31,7 +31,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "320 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-arts-1496373.jpg"]
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "1200 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-asadphoto-457882.jpg"]
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "180 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-baskincreativeco-1766838.jpg"]
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "420 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-bella-white-201200-635279.jpg"]
   },
   {
     id: 5,
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "350 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-christian-heitz-285904-842711.jpg"]
   },
   {
     id: 6,
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "370 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-eberhardgross-1062249.jpg"]
   },
   {
     id: 7,
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "980 m²",
     status: "Under Construction",
-    images: []
+    images: ["/images/projects/pexels-eberhardgross-1612351.jpg"]
   },
   {
     id: 8,
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "410 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-eberhardgross-1624496.jpg"]
   },
   {
     id: 9,
@@ -127,7 +127,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "210 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-jplenio-1110656.jpg"]
   },
   {
     id: 10,
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "340 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-jplenio-1146708.jpg"]
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "1100 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-mdx014-814499.jpg"]
   },
   {
     id: 12,
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "460 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-philippedonn-1257860.jpg"]
   },
   {
     id: 13,
@@ -175,7 +175,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "280 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-pixabay-147411.jpg"]
   },
   {
     id: 14,
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "520 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-pixabay-163872.jpg"]
   },
   {
     id: 15,
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "360 m²",
     status: "Under Construction",
-    images: []
+    images: ["/images/projects/pexels-pixabay-33545.jpg"]
   },
   {
     id: 16,
@@ -211,7 +211,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "1050 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-pixabay-459203.jpg"]
   },
   {
     id: 17,
@@ -223,7 +223,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "390 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-pixabay-460621.jpg"]
   },
   {
     id: 18,
@@ -235,7 +235,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "140 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-pixabay-50594.jpg"]
   },
   {
     id: 19,
@@ -247,7 +247,7 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "380 m²",
     status: "Under Construction",
-    images: []
+    images: ["/images/projects/pexels-souvenirpixels-417074.jpg"]
   },
   {
     id: 20,
@@ -259,6 +259,6 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "450 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/pexels-therato-1933239.jpg"]
   }
 ]
