@@ -2,8 +2,11 @@
 
 import { useState } from 'react'
 import { projects } from "@/data/projects"
-import { ProjectNavigation } from "@/components/ui/ProjectNavigation"
+import { ButtonNavigationLeft } from "@/components/ui/ButtonNavigationLeft"
+import { ButtonNavigationRight } from "@/components/ui/ButtonNavigationRight"
 import { ProjectIndex } from "@/components/ui/ProjectIndex"
+import { ProjectImage } from "@/components/ui/ProjectImageComponent"
+import { ProjectInfoDisplay } from "@/components/ui/ProjectInfoDisplay"
 
 function ProjectsPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -32,30 +35,25 @@ function ProjectsPage() {
           >
             <div className='relative w-full h-full'>
               {project.images[0] && (
-                <img
+                <ProjectImage
                   src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-full object-cover"
                 />
               )}
-              <div className="absolute bottom-32 bg-linear-to-t left-0 right-0 p-8 lg:p-12">
-                <p className="text-xs lg:text-sm tracking-widest uppercase text-white/80 mb-6">
-                  {project.category} — {project.year}
-                </p>
-                <h2 className="text-4xl lg:text-6xl font-serif text-white mb-4">
-                  {project.title}
-                </h2>
-                <p className="text-xl lg:text-2xl text-white/90">
-                  {project.location}
-                </p>
-              </div>
+              <ProjectInfoDisplay
+                category={project.category}
+                year={project.year}
+                title={project.title}
+                location={project.location}
+              />
             </div>
           </div>
         ))}
       </div>
       <div className='absolute bottom-8 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-12'>
-        <ProjectNavigation onPrev={goPrev} onNext={goNext} />
+        <ButtonNavigationLeft onClick={goPrev} />
         <ProjectIndex currentIndex={currentIndex} total={projects.length} />
+        <ButtonNavigationRight onClick={goNext} />
       </div>
     </main>
   )
