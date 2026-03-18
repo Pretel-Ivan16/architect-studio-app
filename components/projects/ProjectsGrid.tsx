@@ -2,6 +2,7 @@ import { ProjectCard } from './ProjectCard'
 
 interface Project {
   id: number
+  slug: string
   title: string
   location: string
   category: string

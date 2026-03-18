@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { projects } from "@/data/projects"
 import { ProjectImage } from "@/components/ui/ProjectImage"
 import { ProjectInfo } from "@/components/ui/ProjectInfo"
@@ -21,31 +22,35 @@ export function ProjectView() {
     <div className='relative w-full h-full'>
       <div className='relative w-full h-full'>
         {projects.map((project, index) => (
-          <div 
-            key={project.id} 
-            className={`absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-1000 ease-out ${
-              index === currentIndex 
-                ? 'opacity-100 translate-x-0 scale-100' 
-                : index > currentIndex 
-                  ? 'opacity-0 translate-x-full scale-95' 
-                  : 'opacity-0 -translate-x-full scale-95'
-            }`}
+          <Link
+            key={project.id}
+            href={`/projects/${project.slug}`}
           >
-            <div className='relative w-full h-full'>
-              {project.images[0] && (
-                <ProjectImage
-                  src={project.images[0]}
-                  alt={project.title}
+            <div 
+              className={`absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-1000 ease-out cursor-pointer ${
+                index === currentIndex 
+                  ? 'opacity-100 translate-x-0 scale-100' 
+                  : index > currentIndex 
+                    ? 'opacity-0 translate-x-full scale-95' 
+                    : 'opacity-0 -translate-x-full scale-95'
+              }`}
+            >
+              <div className='relative w-full h-full'>
+                {project.images[0] && (
+                  <ProjectImage
+                    src={project.images[0]}
+                    alt={project.title}
+                  />
+                )}
+                <ProjectInfo
+                  category={project.category}
+                  year={project.year}
+                  title={project.title}
+                  location={project.location}
                 />
-              )}
-              <ProjectInfo
-                category={project.category}
-                year={project.year}
-                title={project.title}
-                location={project.location}
-              />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <ProjectControls 
