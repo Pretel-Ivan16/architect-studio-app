@@ -1,6 +1,6 @@
 export const footerContent = {
   description: 'Contemporary architecture with a timeless vision. We design spaces that inspire and stand the test of time.',
-  copyrightText: `© ${new Date().getFullYear()} STELLARQ Architecture. All rights reserved.`,
+  copyrightText: `© ${new Date().getFullYear()} ARQ Architecture. All rights reserved.`,
 }
 
 export const navigationLinks = [

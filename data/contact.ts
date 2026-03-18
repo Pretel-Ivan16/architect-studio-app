@@ -4,7 +4,7 @@ export const contactContent = {
   titleHighlight: 'your project',
   description: 'Every great project starts with a conversation. Tell us about your vision, and let\'s explore the possibilities together.',
   direction: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, distinctio.\nLorem, ipsum dolor.',
-  email: 'hola@stellarq.ar',
+  email: 'hola@arq.ar',
   phone: '+54 0 2964 4197 12',
 }
 
