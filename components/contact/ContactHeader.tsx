@@ -1,3 +1,7 @@
+import { Subtitle } from '@/components/ui/Subtitle'
+import { Title } from '@/components/ui/Title'
+import { Description } from '@/components/ui/Description'
+
 interface ContactHeaderProps {
   subtitle: string
   title: string
@@ -13,15 +17,15 @@ export function ContactHeader({
 }: ContactHeaderProps) {
   return (
     <div>
-      <p className="text-[#faf0ef]/60 text-sm tracking-[0.3em] uppercase mb-4">
+      <Subtitle className='text-[#faf0ef]/60'>
         {subtitle}
-      </p>
-      <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#faf0ef] font-light leading-tight">
+      </Subtitle>
+      <Title className='text-[#faf0ef]'>
         {title} <br /><span className="italic">{titleHighlight}</span>
-      </h2>
-      <p className="mt-8 text-[#faf0ef]/80 leading-relaxed max-w-md">
+      </Title>
+      <Description className='mt-8 text-[#faf0ef]/80'>
         {description}
-      </p>
+      </Description>
     </div>
   )
 }

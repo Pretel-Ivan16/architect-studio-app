@@ -1,3 +1,5 @@
+import { FormLabel } from '@/components/ui/FormLabel'
+
 interface FormSelectProps {
   id: string
   label: string
@@ -16,10 +18,10 @@ export function FormSelect({
   required = false,
 }: FormSelectProps) {
   return (
-    <div>
-      <label htmlFor={id} className="block text-[#faf0ef]/60 text-sm tracking-wider uppercase mb-2">
+    <fieldset>
+      <FormLabel htmlFor={id}>
         {label}
-      </label>
+      </FormLabel>
       <select
         id={id}
         value={value}
@@ -34,6 +36,6 @@ export function FormSelect({
           </option>
         ))}
       </select>
-    </div>
+    </fieldset>
   )
 }

@@ -1,3 +1,5 @@
+import { FormLabel } from '@/components/ui/FormLabel'
+
 interface FormFieldProps {
   id: string
   label: string
@@ -16,10 +18,10 @@ export function FormField({
   required = false,
 }: FormFieldProps) {
   return (
-    <div>
-      <label htmlFor={id} className="block text-[#faf0ef]/60 text-sm tracking-wider uppercase mb-2">
+    <fieldset>
+      <FormLabel htmlFor={id}>
         {label}
-      </label>
+      </FormLabel>
       <input 
         type="text" 
         id={id}
@@ -29,6 +31,6 @@ export function FormField({
         placeholder={placeholder}
         required={required}
       />
-    </div>
+    </fieldset>
   )
 }

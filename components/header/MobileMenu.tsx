@@ -10,11 +10,12 @@ interface MobileMenuProps {
   menuItems: MenuItem[]
   onNavClick: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void
   onClose: () => void
+  isHome: boolean
 }
 
-export function MobileMenu({ isOpen, menuItems, onNavClick, onClose }: MobileMenuProps) {
+export function MobileMenu({ isOpen, menuItems, onNavClick, onClose, isHome }: MobileMenuProps) {
   return (
-    <div
+    <nav
       className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
         isOpen ? 'max-h-80' : 'max-h-0'
       }`}
@@ -30,10 +31,11 @@ export function MobileMenu({ isOpen, menuItems, onNavClick, onClose }: MobileMen
                 onNavClick(e, item.href)
                 onClose()
               }}
+              isHome={isHome}
             />
           ))}
         </div>
       </div>
-    </div>
+    </nav>
   )
 }

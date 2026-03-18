@@ -1,4 +1,5 @@
 import { FooterLink } from './FooterLink'
+import { FooterTitle } from '@/components/ui/FooterTitle'
 
 interface FooterSocialProps {
   title: string
@@ -7,11 +8,11 @@ interface FooterSocialProps {
 
 export function FooterSocial({ title, links }: FooterSocialProps) {
   return (
-    <div>
-      <h4 className="text-[#faf0ef] text-sm tracking-widest uppercase mb-4">
+    <nav>
+      <FooterTitle>
         {title}
-      </h4>
-      <nav className="flex flex-col gap-3">
+      </FooterTitle>
+      <div className="flex flex-col gap-3">
         {links.map((link, index) => (
           <FooterLink 
             key={`${link.label}-${index}`}
@@ -19,7 +20,7 @@ export function FooterSocial({ title, links }: FooterSocialProps) {
             label={link.label}
           />
         ))}
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }

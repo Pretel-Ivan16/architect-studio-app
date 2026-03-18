@@ -2,11 +2,13 @@ import { ProjectCard } from './ProjectCard'
 
 interface Project {
   id: number
+  slug: string
   title: string
   location: string
   category: string
   year: string
   description: string
+  images: string[]
 }
 
 interface ProjectsGridProps {

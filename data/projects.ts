@@ -9,6 +9,7 @@ export const projectsContent = {
 
 export interface Project {
   id: number
+  slug: string
   title: string
   category: string
   year: string
@@ -23,6 +24,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    slug: "palermo-courtyard-house",
     title: "Palermo Courtyard House",
     category: "Residential",
     year: "2023",
@@ -31,10 +33,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "320 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Palermo Courtyard House.png"]
   },
   {
     id: 2,
+    slug: "recoleta-410-building",
     title: "Recoleta 410 Building",
     category: "Residential Building",
     year: "2022",
@@ -43,10 +46,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "1200 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Recoleta 410 Building.avif"]
   },
   {
     id: 3,
+    slug: "palermo-soho-loft",
     title: "Palermo Soho Loft",
     category: "Interior Design",
     year: "2024",
@@ -55,10 +59,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "180 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Palermo Soho Loft.avif"]
   },
   {
     id: 4,
+    slug: "san-isidro-country-house",
     title: "San Isidro Country House",
     category: "Residential",
     year: "2021",
@@ -67,10 +72,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "420 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/San Isidro Country House.avif"]
   },
   {
     id: 5,
+    slug: "belgrano-barrancas-residence",
     title: "Belgrano Barrancas Residence",
     category: "Residential",
     year: "2023",
@@ -79,10 +85,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "350 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Belgrano Barracas Residence.avif"]
   },
   {
     id: 6,
+    slug: "palermo-chico-garden-house",
     title: "Palermo Chico Garden House",
     category: "Residential",
     year: "2022",
@@ -91,10 +98,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "370 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Palermo Chico Garden House.avif"]
   },
   {
     id: 7,
+    slug: "recoleta-boutique-building",
     title: "Recoleta Boutique Building",
     category: "Residential Building",
     year: "2024",
@@ -103,10 +111,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "980 m²",
     status: "Under Construction",
-    images: []
+    images: ["/images/projects/Recoleta Boutique Building .avif"]
   },
   {
     id: 8,
+    slug: "nordelta-modern-house",
     title: "Nordelta Modern House",
     category: "Residential",
     year: "2023",
@@ -115,10 +124,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "410 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Nordelta Modern House.avif"]
   },
   {
     id: 9,
+    slug: "recoleta-view-penthouse",
     title: "Recoleta View Penthouse",
     category: "Interior Design",
     year: "2024",
@@ -127,10 +137,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "210 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Recoleta View Penthouse.avif"]
   },
   {
     id: 10,
+    slug: "house-among-trees",
     title: "House Among Trees",
     category: "Residential",
     year: "2022",
@@ -139,10 +150,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "340 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/House Among Trees.avif"]
   },
   {
     id: 11,
+    slug: "palermo-green-building",
     title: "Palermo Green Building",
     category: "Residential Building",
     year: "2023",
@@ -151,10 +163,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "1100 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Palermo Green Building.avif"]
   },
   {
     id: 12,
+    slug: "nordelta-lake-residence",
     title: "Nordelta Lake Residence",
     category: "Residential",
     year: "2021",
@@ -163,10 +176,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "460 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Nordelta Lake House.avif"]
   },
   {
     id: 13,
+    slug: "recoleta-courtyard-renovation",
     title: "Recoleta Courtyard Renovation",
     category: "Renovation",
     year: "2022",
@@ -175,10 +189,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "280 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Recoleta Courtyard Renovation.avif"]
   },
   {
     id: 14,
+    slug: "palermo-creative-offices",
     title: "Palermo Creative Offices",
     category: "Commercial Architecture",
     year: "2023",
@@ -187,10 +202,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "520 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Palermo Creative Offices.avif"]
   },
   {
     id: 15,
+    slug: "san-isidro-minimal-house",
     title: "San Isidro Minimal House",
     category: "Residential",
     year: "2024",
@@ -199,10 +215,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "360 m²",
     status: "Under Construction",
-    images: []
+    images: ["/images/projects/San Isidro Minimalist.avif"]
   },
   {
     id: 16,
+    slug: "urban-courtyard-building",
     title: "Urban Courtyard Building",
     category: "Residential Building",
     year: "2022",
@@ -211,10 +228,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "1050 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Urban Courtyard Building.avif"]
   },
   {
     id: 17,
+    slug: "northern-gallery-house",
     title: "Northern Gallery House",
     category: "Residential",
     year: "2023",
@@ -223,10 +241,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "390 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Northern Gallery House.avif"]
   },
   {
     id: 18,
+    slug: "palermo-design-apartment",
     title: "Palermo Design Apartment",
     category: "Interior Design",
     year: "2021",
@@ -235,10 +254,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "140 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Palermo Design Apartment.avif"]
   },
   {
     id: 19,
+    slug: "barrancas-view-residence",
     title: "Barrancas View Residence",
     category: "Residential",
     year: "2024",
@@ -247,10 +267,11 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "380 m²",
     status: "Under Construction",
-    images: []
+    images: ["/images/projects/Barrancas View Residence.avif"]
   },
   {
     id: 20,
+    slug: "pilar-country-villa",
     title: "Pilar Country Villa",
     category: "Residential",
     year: "2022",
@@ -259,6 +280,6 @@ export const projects: Project[] = [
     architect: "Architect Studio",
     area: "450 m²",
     status: "Completed",
-    images: []
+    images: ["/images/projects/Pilar Country Villa.avif"]
   }
 ]
